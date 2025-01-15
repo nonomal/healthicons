@@ -14,11 +14,17 @@ The project is hosted by the public health not-for-profit [Resolve to Save Lives
 
 ### Accessing Icons
 
-Icons are available in several formats and in a few ways:
+Icons are available in several formats:
 
-- All icons are produced in "outline", "filled", and "negative" styles
+- All icons are produced in "outline" and "filled" styles
 - Each icon is available in SVG and in PNG (48px and 96px)
-- Icons can be downloaded individually via [our website](https://healthicons.org), downloaded together in [a ZIP file](https://healthicons.org/icons.zip), or accessed under the [public/icons](https://github.com/resolvetosavelives/healthicons/tree/main/public/icons) folder in this GitHub project.
+- Some icons are also available in a simplified 24px (Material) format
+
+Icons can be downloaded in a few ways:
+
+- Individually from [our website](https://healthicons.org)
+- Together as [a ZIP file](https://healthicons.org/icons.zip)
+- Via [NPM](https://www.npmjs.com/package/healthicons): `npm i healthicons` or `yarn add healthicons`
 
 ### Icon Requests
 
@@ -127,4 +133,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- 

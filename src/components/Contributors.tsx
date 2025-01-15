@@ -27,6 +27,11 @@ const contributors = [
     avatar: 'https://unavatar.io/twitter/dburka'
   },
   {
+    name: 'Gershon Paul',
+    link: 'https://www.linkedin.com/in/gershonpaul',
+    avatar: 'https://unavatar.io/twitter/gerrrsh'
+  },
+  {
     name: 'Gregory Schmidt',
     link: 'https://twitter.com/_GregSchmidt',
     avatar: 'https://unavatar.io/twitter/_GregSchmidt'
@@ -73,13 +78,13 @@ const contributors = [
   },
   {
     name: 'Michael Gauthier',
-    link: 'https://twitter.com/hypertextmike',
-    avatar: 'https://unavatar.io/twitter/hypertextmike'
+    link: 'https://github.com/gauthierm',
+    avatar: 'https://unavatar.io/github/gauthierm'
   },
   {
     name: 'Nick Burka',
-    link: 'https://twitter.com/nickburka',
-    avatar: 'https://unavatar.io/twitter/nickburka'
+    link: 'https://bsky.app/profile/nickburka.bsky.social',
+    avatar: 'https://unavatar.io/github/nburka'
   },
   {
     name: 'Parth Kapadia',
@@ -103,8 +108,8 @@ const contributors = [
   },
   {
     name: 'Steven Garrity',
-    link: 'https://twitter.com/sgarrity',
-    avatar: 'https://unavatar.io/twitter/sgarrity'
+    link: 'https://github.com/sgarrity',
+    avatar: 'https://unavatar.io/github/sgarrity'
   },
   {
     name: 'Yugandhar Bhamare',
@@ -125,6 +130,41 @@ const contributors = [
     name: 'Tekeste Kidanu',
     link: 'https://twitter.com/tkmadeit',
     avatar: 'https://unavatar.io/twitter/tkmadeit'
+  },
+  {
+    name: 'Yoshitha Krishna V',
+    //link: 'https://twitter.com/yoshithakrishna',
+    avatar: 'https://unavatar.io/twitter/needs-an-account-' // TODO
+  },
+  {
+    name: 'Jahanvi Singh',
+    link: 'https://twitter.com/me_Jahanvi',
+    avatar: 'https://unavatar.io/twitter/me_Jahanvi'
+  },
+  {
+    name: 'Swetha Ramaswamy',
+    //link: 'https://twitter.com/swetharamaswamy',
+    avatar: 'https://unavatar.io/twitter/needs-an-account-' // TODO
+  },
+  {
+    name: 'Hazly Mohammed',
+    //link: 'https://twitter.com/??',
+    avatar: 'https://unavatar.io/twitter/needs-an-account-' // TODO
+  },
+  {
+    name: 'Samanvitha AN',
+    link: 'https://twitter.com/ASamanvitha',
+    avatar: 'https://unavatar.io/twitter/ASamanvitha'
+  },
+  {
+    name: 'Naveen Sangu',
+    link: 'https://www.linkedin.com/in/naveen-sangu-30250596/',
+    avatar: 'https://unavatar.io/twitter/needs-an-account-' // TODO
+  },
+  {
+    name: 'Linda Ojo Taiwo',
+    link: 'https://www.lindaojo.com',
+    avatar: 'https://unavatar.io/twitter/LindaOjo_'
   }
 ];
 
@@ -139,14 +179,25 @@ export function Contributors() {
       <h2 id={styles.contributors}>Volunteer contributors</h2>
       {contributors.map((contributor, index) => (
         <div key={index} className={styles.contributorItem}>
-          <a href={contributor.link}>
-            <img
-              src={contributor.avatar}
-              alt={`Avatar of ${contributor.name}`}
-              className={styles.contributorAvatarImage}
-            />
-            {contributor.name}
-          </a>
+          {contributor.link ? (
+            <a href={contributor.link}>
+              <img
+                src={contributor.avatar}
+                alt={`Avatar of ${contributor.name}`}
+                className={styles.contributorAvatarImage}
+              />
+              {contributor.name}
+            </a>
+          ) : (
+            <>
+              <img
+                src={contributor.avatar}
+                alt={`Avatar of ${contributor.name}`}
+                className={styles.contributorAvatarImage}
+              />
+              {contributor.name}
+            </>
+          )}
         </div>
       ))}
     </>

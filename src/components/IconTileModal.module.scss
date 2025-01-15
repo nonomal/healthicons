@@ -64,6 +64,7 @@
   transition: background-color ease-in-out 0.15s;
   white-space: nowrap;
   display: inline-block;
+  font-size: 0.8rem;
 
   &:hover {
     background-color: var(--link-color-dark);
@@ -102,6 +103,41 @@
   font-size: 0.8rem;
 }
 
+.modal24pxImage {
+  margin: 16px 0;
+}
+
+.modalTagsSection {
+  margin-top: 2rem;
+}
+
+.nextPrevLinksWrapper {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+}
+
+.nextPrevLinksWrapper a {
+  background: none;
+  border: none;
+  color: var(--link-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-right: 0.2rem;
+
+  &:hover {
+    color: var(--link-color-dark);
+    cursor: pointer;
+  }
+}
+
+.nextPrevLinksWrapper span {
+  padding-right: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ccc;  
+}
+
 @media (min-width: 60rem) {
   .modalWrapper {
     max-height: none;
@@ -124,5 +160,12 @@
     top: 4rem;
     margin: 0;
     width: 96px;
+  }
+
+  .modal24pxImage {
+    position: absolute;
+    left: 90px;
+    width: 24px;
+    height: auto;
   }
 }

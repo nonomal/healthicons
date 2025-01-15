@@ -15,11 +15,14 @@ export interface Category {
   icons: Icon[];
 }
 
+export type IconFormat = '48px' | '24px';
+
 export interface Icon {
   id: string;
   category: string;
   title: string;
   tags: string[];
+  formats: IconFormat[];
 }
 
 export async function getCategoriesAndIcons(): Promise<Category[]> {
@@ -45,13 +48,17 @@ async function getIcons(dirName: string): Promise<Icon[]> {
     fileNames.map(async (fileName) => {
       const id = fileName.replace(/\.[^/.]+$/, '');
 
-      const currentFileMetaData = metaData.find((m) => m.id === id);
+      // find same icon id in the same category from the meta-data JSON file
+      const currentFileMetaData = metaData.find(
+        (m) => m.id === id && m.category === dirName
+      );
 
       return {
         title: currentFileMetaData?.title || id,
         tags: currentFileMetaData?.tags || [],
         id,
-        category: dirName
+        category: dirName,
+        formats: (currentFileMetaData?.formats as IconFormat[]) || ['48px']
       };
     })
   );
